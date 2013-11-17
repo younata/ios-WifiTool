@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890C41891838D7A200944B82 /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C41881838D7A200944B82 /* MobileWiFi.framework */; };
 		89A98CD21838CA9F00DC8011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD11838CA9F00DC8011 /* Foundation.framework */; };
 		89A98CD41838CA9F00DC8011 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD31838CA9F00DC8011 /* CoreGraphics.framework */; };
 		89A98CD61838CA9F00DC8011 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD51838CA9F00DC8011 /* UIKit.framework */; };
@@ -19,6 +20,7 @@
 		89A98CED1838CA9F00DC8011 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD51838CA9F00DC8011 /* UIKit.framework */; };
 		89A98CF51838CA9F00DC8011 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89A98CF31838CA9F00DC8011 /* InfoPlist.strings */; };
 		89A98CF71838CA9F00DC8011 /* WifiToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A98CF61838CA9F00DC8011 /* WifiToolTests.m */; };
+		89A98D0B1838CD2C00DC8011 /* RBWifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A98D0A1838CD2C00DC8011 /* RBWifiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		890C41881838D7A200944B82 /* MobileWiFi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileWiFi.framework; path = System/Library/PrivateFrameworks/MobileWiFi.framework; sourceTree = SDKROOT; };
 		89A98CCE1838CA9F00DC8011 /* WifiTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A98CD11838CA9F00DC8011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89A98CD31838CA9F00DC8011 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +51,13 @@
 		89A98CF21838CA9F00DC8011 /* WifiToolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WifiToolTests-Info.plist"; sourceTree = "<group>"; };
 		89A98CF41838CA9F00DC8011 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89A98CF61838CA9F00DC8011 /* WifiToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WifiToolTests.m; sourceTree = "<group>"; };
+		89A98D011838CC7900DC8011 /* MobileWiFi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MobileWiFi.h; path = WifiTool/MobileWiFi.h; sourceTree = "<group>"; };
+		89A98D021838CC7900DC8011 /* WiFiDeviceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiDeviceClient.h; path = WifiTool/WiFiDeviceClient.h; sourceTree = "<group>"; };
+		89A98D031838CC7900DC8011 /* WiFiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiManager.h; path = WifiTool/WiFiManager.h; sourceTree = "<group>"; };
+		89A98D041838CC7900DC8011 /* WiFiNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiNetwork.h; path = WifiTool/WiFiNetwork.h; sourceTree = "<group>"; };
+		89A98D091838CD2C00DC8011 /* RBWifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBWifiViewController.h; path = ../RBWifiViewController.h; sourceTree = "<group>"; };
+		89A98D0A1838CD2C00DC8011 /* RBWifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBWifiViewController.m; path = ../RBWifiViewController.m; sourceTree = "<group>"; };
+		89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Apple80211.xcodeproj; path = WifiTool/Apple80211/Apple80211.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 				89A98CD41838CA9F00DC8011 /* CoreGraphics.framework in Frameworks */,
 				89A98CD61838CA9F00DC8011 /* UIKit.framework in Frameworks */,
 				89A98CD21838CA9F00DC8011 /* Foundation.framework in Frameworks */,
+				890C41891838D7A200944B82 /* MobileWiFi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,7 @@
 		89A98CC51838CA9F00DC8011 = {
 			isa = PBXGroup;
 			children = (
+				89A98D051838CCEA00DC8011 /* MobileWifi */,
 				89A98CD71838CA9F00DC8011 /* WifiTool */,
 				89A98CF01838CA9F00DC8011 /* WifiToolTests */,
 				89A98CD01838CA9F00DC8011 /* Frameworks */,
@@ -96,6 +108,7 @@
 		89A98CD01838CA9F00DC8011 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890C41881838D7A200944B82 /* MobileWiFi.framework */,
 				89A98CD11838CA9F00DC8011 /* Foundation.framework */,
 				89A98CD31838CA9F00DC8011 /* CoreGraphics.framework */,
 				89A98CD51838CA9F00DC8011 /* UIKit.framework */,
@@ -109,6 +122,8 @@
 			children = (
 				89A98CE01838CA9F00DC8011 /* RBAppDelegate.h */,
 				89A98CE11838CA9F00DC8011 /* RBAppDelegate.m */,
+				89A98D091838CD2C00DC8011 /* RBWifiViewController.h */,
+				89A98D0A1838CD2C00DC8011 /* RBWifiViewController.m */,
 				89A98CE31838CA9F00DC8011 /* Images.xcassets */,
 				89A98CD81838CA9F00DC8011 /* Supporting Files */,
 			);
@@ -142,6 +157,25 @@
 				89A98CF31838CA9F00DC8011 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89A98D051838CCEA00DC8011 /* MobileWifi */ = {
+			isa = PBXGroup;
+			children = (
+				89A98D011838CC7900DC8011 /* MobileWiFi.h */,
+				89A98D021838CC7900DC8011 /* WiFiDeviceClient.h */,
+				89A98D031838CC7900DC8011 /* WiFiManager.h */,
+				89A98D041838CC7900DC8011 /* WiFiNetwork.h */,
+				89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */,
+			);
+			name = MobileWifi;
+			sourceTree = "<group>";
+		};
+		89A98D1D1838D49C00DC8011 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +226,16 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Rachel Brindle";
 				TargetAttributes = {
+					89A98CCD1838CA9F00DC8011 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
 					89A98CE81838CA9F00DC8011 = {
 						TestTargetID = 89A98CCD1838CA9F00DC8011;
 					};
@@ -207,6 +251,12 @@
 			mainGroup = 89A98CC51838CA9F00DC8011;
 			productRefGroup = 89A98CCF1838CA9F00DC8011 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 89A98D1D1838D49C00DC8011 /* Products */;
+					ProjectRef = 89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				89A98CCD1838CA9F00DC8011 /* WifiTool */,
@@ -242,6 +292,7 @@
 			files = (
 				89A98CE21838CA9F00DC8011 /* RBAppDelegate.m in Sources */,
 				89A98CDE1838CA9F00DC8011 /* main.m in Sources */,
+				89A98D0B1838CD2C00DC8011 /* RBWifiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WifiTool/WifiTool-Prefix.pch";
 				INFOPLIST_FILE = "WifiTool/WifiTool-Info.plist";
@@ -373,6 +428,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WifiTool/WifiTool-Prefix.pch";
 				INFOPLIST_FILE = "WifiTool/WifiTool-Info.plist";
@@ -442,6 +501,7 @@
 				89A98CFC1838CA9F00DC8011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89A98CFD1838CA9F00DC8011 /* Build configuration list for PBXNativeTarget "WifiToolTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +510,7 @@
 				89A98CFF1838CA9F00DC8011 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

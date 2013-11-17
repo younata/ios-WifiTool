@@ -7,6 +7,7 @@
 //
 
 #import "RBAppDelegate.h"
+#import "RBWifiViewController.h"
 
 @implementation RBAppDelegate
 
@@ -16,6 +17,17 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    _nc = [[UINavigationController alloc] init];
+    
+    //nc.navigationBar.translucent = NO;
+    //nc.navigationBar.barStyle = UIBarStyleBlack;
+    //nc.navigationBar.tintColor = [UIColor redColor];
+    
+    [_nc pushViewController:[[RBWifiViewController alloc] initWithStyle:UITableViewStylePlain] animated:NO];
+    
+    self.window.rootViewController = _nc;
+    
     return YES;
 }
 
