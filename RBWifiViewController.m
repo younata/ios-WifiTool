@@ -8,6 +8,7 @@
 
 #import "RBWifiViewController.h"
 #import "RBAppDelegate.h"
+#import "RBShellScript.h"
 
 @interface RBWifiViewController ()
 -(void)onWifiScan:(NSArray *)results;
@@ -36,7 +37,6 @@ static void scan_callback(WiFiDeviceClientRef device, CFArrayRef results, CFErro
         // Custom initialization
         wifiNetworks = [[NSMutableArray alloc] init];
         manager = WiFiManagerClientCreate(kCFAllocatorDefault, 1);
-        NSLog(@"%@", manager);
     }
     return self;
 }
@@ -51,7 +51,6 @@ static void scan_callback(WiFiDeviceClientRef device, CFArrayRef results, CFErro
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSLog(@"%@", manager);
     CFArrayRef networks = WiFiManagerClientCopyNetworks(manager);
     if (networks) {
         NSLog(@"%@", networks);
@@ -59,16 +58,13 @@ static void scan_callback(WiFiDeviceClientRef device, CFArrayRef results, CFErro
     }
     
     CFArrayRef devices = WiFiManagerClientCopyDevices(manager);
-	if (!devices) {
-		fprintf(stderr, "Couldn't get WiFi devices. Bailing.\n");
-		exit(EXIT_FAILURE);
-	}
-    
-	WiFiDeviceClientRef client = (WiFiDeviceClientRef)CFArrayGetValueAtIndex(devices, 0);
+	if (devices) {
+        NSLog(@"devices (%@) has %ld devices", devices, CFArrayGetCount(devices));
+        WiFiDeviceClientRef client = (WiFiDeviceClientRef)CFArrayGetValueAtIndex(devices, 0);
+        WiFiDeviceClientScanAsync(client, (__bridge CFDictionaryRef)[NSDictionary dictionary], scan_callback, 0);
+    }
     
 	WiFiManagerClientScheduleWithRunLoop(manager, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-	WiFiDeviceClientScanAsync(client, (__bridge CFDictionaryRef)[NSDictionary dictionary], scan_callback, 0);
-
 }
 
 - (void)didReceiveMemoryWarning

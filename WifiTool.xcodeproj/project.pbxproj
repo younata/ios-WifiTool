@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		890C41891838D7A200944B82 /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C41881838D7A200944B82 /* MobileWiFi.framework */; };
+		899F0E6319C9488200A97D91 /* RBShellScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 899F0E6219C9488200A97D91 /* RBShellScript.m */; };
 		89A98CD21838CA9F00DC8011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD11838CA9F00DC8011 /* Foundation.framework */; };
 		89A98CD41838CA9F00DC8011 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD31838CA9F00DC8011 /* CoreGraphics.framework */; };
 		89A98CD61838CA9F00DC8011 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A98CD51838CA9F00DC8011 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		890C41881838D7A200944B82 /* MobileWiFi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileWiFi.framework; path = System/Library/PrivateFrameworks/MobileWiFi.framework; sourceTree = SDKROOT; };
+		899F0E6119C9488200A97D91 /* RBShellScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBShellScript.h; sourceTree = "<group>"; };
+		899F0E6219C9488200A97D91 /* RBShellScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBShellScript.m; sourceTree = "<group>"; };
 		89A98CCE1838CA9F00DC8011 /* WifiTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A98CD11838CA9F00DC8011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89A98CD31838CA9F00DC8011 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +60,6 @@
 		89A98D041838CC7900DC8011 /* WiFiNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiNetwork.h; path = WifiTool/WiFiNetwork.h; sourceTree = "<group>"; };
 		89A98D091838CD2C00DC8011 /* RBWifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RBWifiViewController.h; path = ../RBWifiViewController.h; sourceTree = "<group>"; };
 		89A98D0A1838CD2C00DC8011 /* RBWifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RBWifiViewController.m; path = ../RBWifiViewController.m; sourceTree = "<group>"; };
-		89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Apple80211.xcodeproj; path = WifiTool/Apple80211/Apple80211.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,8 @@
 				89A98CE11838CA9F00DC8011 /* RBAppDelegate.m */,
 				89A98D091838CD2C00DC8011 /* RBWifiViewController.h */,
 				89A98D0A1838CD2C00DC8011 /* RBWifiViewController.m */,
+				899F0E6119C9488200A97D91 /* RBShellScript.h */,
+				899F0E6219C9488200A97D91 /* RBShellScript.m */,
 				89A98CE31838CA9F00DC8011 /* Images.xcassets */,
 				89A98CD81838CA9F00DC8011 /* Supporting Files */,
 			);
@@ -166,16 +170,8 @@
 				89A98D021838CC7900DC8011 /* WiFiDeviceClient.h */,
 				89A98D031838CC7900DC8011 /* WiFiManager.h */,
 				89A98D041838CC7900DC8011 /* WiFiNetwork.h */,
-				89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */,
 			);
 			name = MobileWifi;
-			sourceTree = "<group>";
-		};
-		89A98D1D1838D49C00DC8011 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +247,6 @@
 			mainGroup = 89A98CC51838CA9F00DC8011;
 			productRefGroup = 89A98CCF1838CA9F00DC8011 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 89A98D1D1838D49C00DC8011 /* Products */;
-					ProjectRef = 89A98D1C1838D49C00DC8011 /* Apple80211.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				89A98CCD1838CA9F00DC8011 /* WifiTool */,
@@ -293,6 +283,7 @@
 				89A98CE21838CA9F00DC8011 /* RBAppDelegate.m in Sources */,
 				89A98CDE1838CA9F00DC8011 /* main.m in Sources */,
 				89A98D0B1838CD2C00DC8011 /* RBWifiViewController.m in Sources */,
+				899F0E6319C9488200A97D91 /* RBShellScript.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

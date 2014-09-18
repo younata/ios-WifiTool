@@ -9,6 +9,14 @@
 #import "RBAppDelegate.h"
 #import "RBWifiViewController.h"
 
+#import <dlfcn.h>
+
+@interface RBAppDelegate ()
+
+@property (nonatomic) void *dlhandler;
+
+@end
+
 @implementation RBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -27,6 +35,8 @@
     [_nc pushViewController:[[RBWifiViewController alloc] initWithStyle:UITableViewStylePlain] animated:NO];
     
     self.window.rootViewController = _nc;
+    
+    self.dlhandler = dlopen("/System/Library/SystemConfiguration/IPConfiguration.bundle/IPConfiguration", RTLD_LAZY);
     
     return YES;
 }
@@ -56,6 +66,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    dlclose(self.dlhandler);
+    self.dlhandler = nil;
 }
 
 @end
